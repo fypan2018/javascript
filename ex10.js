@@ -14,9 +14,9 @@
 // print backslash_cat
 // print fat_cat
 
-tabbyCat = "\tI'm tabbed in.";
-persianCat = "I'm split\non a line.";
-backslashCat = "I'm a \\ a \\ cat.";
+var tabbyCat = "\tI'm tabbed in.";
+var persianCat = "I'm split\non a line.";
+var backslashCat = "I'm a \\ a \\ cat.";
 
 fatCat = "\n\
 I'll do a list:\n\

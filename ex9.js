@@ -14,8 +14,8 @@
 // Even 4 lines if we want, or 5, or 6.
 // """
 
-days = 'Mon Tue Wed Thu Fri Sat Sun';
-months = 'Jan\nFeb\nMar\nApr\nMay\nJune\nJul\nAug';
+var days = 'Mon Tue Wed Thu Fri Sat Sun';
+var months = 'Jan\nFeb\nMar\nApr\nMay\nJune\nJul\nAug';
 
 console.log("Here are the days: " + days);
 console.log("Here are the months: " + months);

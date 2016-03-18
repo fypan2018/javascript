@@ -7,8 +7,8 @@
 // 
 // print "So, you're %r old, %r tall and %r heavy." % (age, height, weight)
 
-age = prompt("How old are you?");
-height = prompt("How tall are you?");
-weight = prompt("How much do you weigh?");
+var age = prompt("How old are you?");
+var height = prompt("How tall are you?");
+var weight = prompt("How much do you weigh?");
 
 console.log("So you're " + age + ' old ' + height + " and " + weight + ' heavy'); 
