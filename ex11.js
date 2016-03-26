@@ -7,8 +7,24 @@
 // 
 // print "So, you're %r old, %r tall and %r heavy." % (age, height, weight)
 
-var age = prompt("How old are you?");
-var height = prompt("How tall are you?");
-var weight = prompt("How much do you weigh?");
+// set prompt as variables
+var age = 35;
+var height = '6\'4\"';
+var weight = 130 + 'lbs';
 
-console.log("So you're " + age + ' old ' + height + " and " + weight + ' heavy'); 
+console.log("So you're " + age + ' years old, ' + height + " tall and " + weight + ' heavy'); 
+
+// using npm prompt
+
+var prompt = require('prompt')
+
+prompt.start();
+
+console.log("How old are you?");
+console.log("How tall are you?");
+console.log("How much do you weigh?");
+
+prompt.get(['age', 'height', 'weight'], function (err, result) {
+
+console.log("So you're " + result.age + ' old ' + result.height + " and " + result.weight + ' heavy'); 
+});
