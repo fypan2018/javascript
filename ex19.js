@@ -42,6 +42,7 @@
 // 
 // name(cat, dog)
 
+// set prompt with set variables
 function cheeseAndCrackers(cheeseCount, boxesOfCrackers) {
     console.log("You have " + cheeseCount + ' cheeses!');
     console.log("You have " + boxesOfCrackers + ' boxes of crackers!');
@@ -76,10 +77,55 @@ var yourLastName = 'Smith';
 
 name(yourFirstName, yourLastName);
 
-var cat = prompt("What is your first name?");
+var cat = 'Mark';
 
-
-var dog = prompt("What is your last name?");
-
+var dog = 'Jackson';
 
 name(cat, dog);
+
+// using npm prompt
+var prompt = require('prompt');
+
+prompt.start();
+
+function cheeseAndCrackers(cheeseCount, boxesOfCrackers) {
+    console.log("You have " + cheeseCount + ' cheeses!');
+    console.log("You have " + boxesOfCrackers + ' boxes of crackers!');
+    console.log("Man that's enough for a party!");
+    console.log("Get a blanket. \n");
+}   
+console.log("We can just give the function numbers directly:");
+cheeseAndCrackers( 20, 30);
+
+console.log("OR, we can use variables from our script:");
+
+var amountOfCheese = 10;
+var amountOfCrackers = 50;
+
+cheeseAndCrackers(amountOfCheese, amountOfCrackers);
+
+console.log("We can even do math inside too: ");
+cheeseAndCrackers(10 + 20, 5 + 6);
+
+console.log("And we can combine the two, variable and math: ");
+cheeseAndCrackers(amountOfCheese + 100, amountOfCrackers + 1000);
+
+function name(firstName, lastName) {
+    console.log("My first name is " + firstName);
+    console.log("My last name is " + lastName);
+}
+
+name("Kim", "Crayton");
+
+var yourFirstName = 'Sam';
+var yourLastName = 'Smith';
+
+name(yourFirstName, yourLastName);
+
+console.log("What is your first name?");
+console.log("What is your last name?");
+
+prompt.get(['first_name', 'last_name'], function (err, result) {
+
+    name(result.first_name, result.last_name);
+});
